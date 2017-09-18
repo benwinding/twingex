@@ -8,5 +8,5 @@ window.storyFormat({
   "license":'MIT License',
   "proofing":false,
 
-  "source":"<html>\r\n\t<head>\r\n\t\t<title>{{STORY_NAME}}</title>\r\n\t\t<meta charset=\"UTF-8\">\r\n\t\t</head>\r\n\t<body>\r\n\t\t<pre id=\"output\">\r\n\t\t\r\n\t\t</pre>\r\n\t\t<div id=\"storyData\" style=\"display: none;\">\r\n\t\t\t{{STORY_DATA}}\r\n\t\t</div>\r\n\t</body>\r\n</html>"
+  "source":"<html>\r\n\t<head>\r\n\t\t<title>{{STORY_NAME}}</title>\r\n\t\t<meta charset=\"UTF-8\">\r\n\t\t</head>\r\n\t<body>\r\n\t\t<div id=\"storyData\" style=\"display: none;\">\r\n\t\t\t{{STORY_DATA}}\r\n\t\t</div>\r\n\t</body>\r\n</html>"
 });
