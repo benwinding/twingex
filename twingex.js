@@ -1,6 +1,6 @@
 window.storyFormat({
   "name":"TwingeX",
-  "version":"0.1",
+  "version":"0.0.2",
   "author":'Ben (that guy) Winding',
   "description":"The extremely simple 'twingex' format.",
   "image":"icon.svg",
