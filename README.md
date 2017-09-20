@@ -4,6 +4,14 @@ An export format for the **Twine** interactive fiction browser. Based on the Ent
 ### Features
 - Exports simple twine compatible code
 
+### Install Format
+Assuming you have Twine2 installed, simply follow these steps:
+
+1. Home > Formats
+2. Paste following link into: **Add a new format**
+
+`https://rawgit.com/benwinding/twingex/master/twingex.js`
+
 ### Use in the Terminal!
 This format is intended to be used for scripting on the commandline.
 
