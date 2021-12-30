@@ -29,3 +29,7 @@ This outputs raw html
 ### Required
 - chrome 59 or greater
 - [hermit](https://github.com/thlorenz/hermit) command line html parser
+
+### Development
+
+- Run `./build.js` to rebuild the exporter (`./twingex.js`)

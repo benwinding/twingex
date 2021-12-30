@@ -2,6 +2,7 @@
 
 // This compiles the output format file "/twingex.js", which is used by Twine2 
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const outputFilePath = path.join(__dirname, './twingex.js');
@@ -29,9 +30,11 @@ function GetTemplateSource() {
   return templateStr;
 }
 
+const VERSION = GetNewVersion();
+
 const outputObj = {
   "name": "TwingeX",
-  "version": GetNewVersion(),
+  "version": VERSION,
   "author": "Ben Winding",
   "description": "The extremely simple 'twingex' format.",
   "image": "icon.svg",
@@ -43,3 +46,6 @@ const outputObj = {
 
 const outputStr = `window.storyFormat(${JSON.stringify(outputObj, null, 2)})`
 fs.writeFileSync(outputFilePath, outputStr)
+execSync('git add .', {cwd: __dirname});
+execSync(`git commit -am "Built: ${VERSION}"`, {cwd: __dirname});
+execSync(`git tag "${VERSION}"`, {cwd: __dirname});
