@@ -45,7 +45,12 @@ const outputObj = {
 };
 
 const outputStr = `window.storyFormat(${JSON.stringify(outputObj, null, 2)})`
-fs.writeFileSync(outputFilePath, outputStr)
-execSync('git add .', {cwd: __dirname});
-execSync(`git commit -am "Built: ${VERSION}"`, {cwd: __dirname});
-execSync(`git tag "${VERSION}"`, {cwd: __dirname});
+fs.writeFileSync(outputFilePath, outputStr);
+
+console.log(' --- finished building twingex version: ' + VERSION)
+if (process.argv.includes('--tag'))  {
+  console.log(' --- running git tag for version: ' + VERSION)
+  execSync('git add .', {cwd: __dirname});
+  execSync(`git commit -am "Built: ${VERSION}"`, {cwd: __dirname});
+  execSync(`git tag "${VERSION}"`, {cwd: __dirname});
+}

@@ -33,3 +33,4 @@ This outputs raw html
 ### Development
 
 - Run `./build.js` to rebuild the exporter (`./twingex.js`)
+- Run `./build.js --tag` to run the git tag as well
