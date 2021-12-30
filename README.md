@@ -10,7 +10,7 @@ Assuming you have Twine2 installed, simply follow these steps:
 1. Home > Formats
 2. Paste following link into: **Add a new format**
 
-`https://rawgit.com/benwinding/twingex/master/twingex.js`
+`https://cdn.jsdelivr.net/gh/benwinding/twingex@master/twingex.js`
 
 ### Use in the Terminal!
 This format is intended to be used for scripting on the commandline.
