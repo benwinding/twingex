@@ -50,7 +50,13 @@ fs.writeFileSync(outputFilePath, outputStr);
 console.log(' --- finished building twingex version: ' + VERSION)
 if (process.argv.includes('--tag'))  {
   console.log(' --- running git tag for version: ' + VERSION)
-  execSync('git add .', {cwd: __dirname});
-  execSync(`git commit -am "Built: ${VERSION}"`, {cwd: __dirname});
-  execSync(`git tag "${VERSION}"`, {cwd: __dirname});
+  const opts = {cwd: __dirname}
+  execSync('git add .', opts);
+  execSync(`git commit -am "Built: ${VERSION}"`, opts);
+  execSync(`git tag "${VERSION}"`, opts);
+  execSync(`git push --tags`, opts);
 }
+console.log(` --- format link: 
+
+https://cdn.jsdelivr.net/gh/benwinding/twingex@${VERSION}/twingex.js
+`);
