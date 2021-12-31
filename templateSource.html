@@ -50,12 +50,10 @@
             return result.join('');
           },
           scrub: function (content) {
-            if (content) {
-              content = content.replace(/^::/gm, " ::");
-              content = content.replace(/\</gm, "&lt;");
-              content = content.replace(/\>/gm, "&gt;");
-            }
-            return content;
+            return (content || '')
+              .replace(/^::/gm, " ::")
+              .replace(/\</gm, "&lt;")
+              .replace(/\>/gm, "&gt;");
           }
         }
       }
